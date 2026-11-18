@@ -2,7 +2,7 @@ import { useState, type FormEvent } from 'react';
 import { supabase } from '../lib/supabase';
 import { mensajeDeError } from '../lib/errores';
 
-/** Primera vez: se crea la empresa. El resto de Configuración viene en el paso siguiente. */
+/** Primera vez: se crea la empresa y después sigue en Configuración. */
 export default function PrimeraVez({ alCrear }: { alCrear: (empresaId: string) => void }) {
   const [nombre, setNombre] = useState('');
   const [enviando, setEnviando] = useState(false);

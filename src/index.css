@@ -48,3 +48,64 @@ p { margin: 0 0 1rem; }
 .aviso { padding: 0.75rem 0.9rem; border-radius: 10px; margin-bottom: 1rem; }
 .aviso.error { background: var(--error-fondo); color: var(--error); }
 .aviso.ok { background: var(--ok-fondo); color: var(--ok); }
+
+.boton.secundario { background: #fff; color: var(--azul); border: 1px solid var(--azul); }
+.boton.secundario:hover { background: #eef3fa; }
+
+/* Pantallas de trabajo (no centradas) */
+.pagina { min-height: 100vh; }
+.barra {
+  position: sticky; top: 0; z-index: 2; display: flex; align-items: center; gap: 0.75rem;
+  background: var(--tarjeta); border-bottom: 1px solid var(--borde); padding: 0.75rem 1rem;
+}
+.barra h1 { font-size: 1.3rem; margin: 0; }
+.volver {
+  font: inherit; background: none; border: 0; color: var(--azul); cursor: pointer;
+  min-height: 44px; padding: 0 0.5rem 0 0;
+}
+.formulario { max-width: 720px; margin: 0 auto; padding: 1rem; }
+.seccion {
+  background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 14px;
+  padding: 1.25rem; margin-bottom: 1rem;
+}
+.seccion h2 { font-size: 1.2rem; margin: 0 0 0.75rem; }
+.ayuda { color: var(--suave); font-size: 0.9rem; margin: 0 0 1rem; }
+.opcional { color: var(--suave); font-weight: 400; font-size: 0.85rem; }
+.grilla { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 0 1rem; }
+.categoria { border: 0; padding: 0; margin: 0 0 0.5rem; min-width: 0; }
+.categoria legend { font-weight: 700; padding: 0; margin-bottom: 0.4rem; }
+.categoria .campo label { font-weight: 400; color: var(--suave); }
+
+.campo textarea {
+  font: inherit; padding: 0.75rem 0.9rem; border: 1px solid var(--borde);
+  border-radius: 10px; color: inherit; resize: vertical;
+}
+.campo textarea:focus { outline: 3px solid rgba(31, 95, 168, 0.25); border-color: var(--azul); }
+
+.con-unidad {
+  display: flex; align-items: center; border: 1px solid var(--borde); border-radius: 10px;
+  background: #fff; min-height: 52px; padding: 0 0.9rem; gap: 0.4rem;
+}
+.con-unidad:focus-within { outline: 3px solid rgba(31, 95, 168, 0.25); border-color: var(--azul); }
+.con-unidad span { color: var(--suave); white-space: nowrap; }
+.campo .con-unidad input {
+  border: 0; outline: 0; padding: 0.75rem 0; min-height: 0; flex: 1; min-width: 0;
+  text-align: right; font-variant-numeric: tabular-nums;
+}
+.con-unidad.invalido { border-color: var(--error); }
+.error-campo { color: var(--error); }
+
+.logo-fila { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+.logo-fila .ayuda { margin: 0; }
+.logo-circulo {
+  flex: none; width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--azul); color: #fff; font-weight: 700; font-size: 1.4rem;
+}
+
+.pie-fijo {
+  position: sticky; bottom: 0; background: var(--fondo); padding: 0.75rem 0 1rem;
+}
+.pie-fijo .aviso { margin-bottom: 0.5rem; }
+.grilla > *, .campo, .con-unidad { min-width: 0; }
+.campo .con-unidad input { width: 100%; }
+.campo input, .campo textarea { width: 100%; }
